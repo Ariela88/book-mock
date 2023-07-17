@@ -1,53 +1,21 @@
 class Manager {
-
     constructor(booksArray = []) {
-        
-        this.booksArray = booksArray
-
+      this.booksArray = booksArray;
     }
-
-    addbooks(books) {
-
-        this.booksArray.push(books)
-
+  
+    addBook(book) {
+      this.booksArray.push(book);
     }
-
-    // addbooksWithTitle(title) {
-
-    //     const newbooks = new books(title)
-
-    //     this.addbooks(newbooks)
-    //     Storage.saveData(manager.booksArray)} 
-
-
-   
-
-    // orderoDosByTitle() {
-
-    //     this.booksArray.sort((books1, books2) => books1.compareByTitle(books2))
-
-
-    // }
-
-    // orderbookssByDop() {
-
-
-    //     this.booksArray.sort((books1, books2) => books1.compareByDop(books2))
-
-
-    // }
-
-    
-
-
-    deletebooks(index) {
-
-        
-        
-        this.booksArray.splice(index, 1);
-        
-        
-
+  
+    orderByTitle() {
+      this.booksArray.sort((book1, book2) => book1.title.localeCompare(book2.title));
     }
-
-}
+  
+    orderByDop() {
+      this.booksArray.sort((book1, book2) => book1.dop.localeCompare(book2.dop));
+    }
+  
+    deleteBook(index) {
+      this.booksArray.splice(index, 1);
+    }
+  }

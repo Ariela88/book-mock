@@ -1,61 +1,46 @@
-let manager;
-DbService.getAllBooks().then(books => {
-    manager = new Manager(books);
-    render();
-})
-
-function render() {
 
 
-    const booksWrapper = document.getElementById('books-wrapper')
 
+  function render(books) {
+    const booksWrapper = document.getElementById('books-wrapper');
+    const mainContainer = document.getElementById('mainContainer');
+  
     booksWrapper.innerHTML = '';
+  
+    for (let i = 0; i < books.length; i++) {
+      const book = books[i];
+  
+      const cardBook = document.createElement('div');
+      cardBook.classList.add('card-book');
+  
+      const TitleCard = document.createElement('strong');
+      const AuthorCard = document.createElement('span');
+  
+      const nodeTitle = document.createTextNode(book.title);
+      const nodeAuthor = document.createTextNode(book.author);
+  
+      TitleCard.appendChild(nodeTitle);
+      AuthorCard.appendChild(nodeAuthor);
+  
+      cardBook.appendChild(TitleCard);
+      cardBook.appendChild(AuthorCard);
+      mainContainer.appendChild(cardBook);
+  
+      const detailBtn = document.createElement('button');
+      const detailBtnNode = document.createTextNode('Dettagli');
+      detailBtn.appendChild(detailBtnNode);
+  
+      detailBtn.addEventListener('click', () => {
+        // Utilizziamo la funzione encodeURI per gestire eventuali caratteri speciali nell'ID del libro.
+        window.location = './details.html?id=' + encodeURI(book.id);
+      });
+  
+      cardBook.appendChild(detailBtn);
+    }
+    }
 
-    for (let i = 0; i < manager.booksArray.length; i++) {
-        const book = manager.booksArray[i];
-        console.log(booksArray)
-
-        const div = document.createElement('div')
-        const titleStrong = document.createElement('strong')
-        const titleNode = document.createTextNode(book.title)
-
-        div.classList.add('book-card')
-
-        titleStrong.appendChild(titleNode)
-        div.appendChild(titleStrong)
-
-        // const deleteBtn = document.createElement('button');
-
-        // const deleteNode = document.createTextNode("cancella");
-
-        // deleteBtn.appendChild(deleteNode);
-
-        // div.appendChild(deleteBtn);
-        // deleteBtn.classList.add('dltBtn')
-
-
-        // deleteBtn.addEventListener("click", () => {
-
-        //     DbService.deleteBooks(book.id).then(() => {
-        //         manager.deleteBooks(i);
-
-        //         render();
-
-            }
-
-            const dopSpan = document.createElement('span')
-        const dopNode = document.createTextNode(book.dop)
-
-
-        dopSpan.appendChild(dopSpan)
-        div.appendChild(dopSpan)
-
-        booksWrapper.appendChild(div)
-
-
-        };
-
-        render()
-
-    
-    
+  DbService.getAllBooks().then(books => {
+    const manager = new Manager(books);
+    render(manager.booksArray);
+  });
+  
