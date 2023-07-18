@@ -10,10 +10,13 @@
 
 <body>
     <header>
-        <h1> la tua Libreria Virtuale </h1>
+        <h1> La tua libreria Virtuale </h1>
     </header>
+    <div class="main"> 
+    <div class="h3-add-book"> <h3> Inserisci un nuovo libro <br>
+        nella tua collezione</h3></div>
     <div  id="add-book-input">
-        <form name ="addBooks">
+        <form  class="add-container"name ="addBooks">
             <label for="title"> Titolo </label><input name="title" type="text">
             <label for="author"> Autore </label><input name="author"type="text">
             <label for="dop"> Anno di pubblicazione </label><input name="dop"type="number">
@@ -22,9 +25,14 @@
         </form>
         <button onclick="saveBooks()"> inserisci </button>
     </div>
+    <!-- <div class="sort-container"> 
+        <button onclick="OrderBookByTitle()"> Ordina per Nome </button>
+    <button onclick="OrderBookByDop()"> Ordina per Anno </button>
+    </div> -->
    
 
     <div id="books-wrapper"></div>
+</div>
 </body>
 <script src="./service/db-service.js"></script>
 <script src="./models/book.js"></script>

@@ -1,14 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Italianno&family=Josefin+Sans:wght@200;400;600;700&family=Lugrasimo&family=Yesteryear&display=swap');
+
+
+
+button{
+    background-color: white;
+
+    color: rgb(26, 26, 26);
+    font-size: 1rem;
+    box-shadow: none;
+    border: none;
+    border: 1px solid rgb(26, 26, 26);;
+    margin-left:30px ;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+  
+    
+}
+
+
+
+body{
+    box-sizing: border-box;
+
+   margin: 0;
+    background-color: bisque;
+}
+header{
+
+
+    background-color: #8a1e1ed4;
+    color: white;
+    width: 99vw;
+    margin: 0;
+    padding: 50px;
+    height: 25%;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    height: 25%;
+    font-family: 'Barrio';
+    font-size: 5rem;
+    /* text-shadow: -1px 0 #4f4f4f, 0 1px #4f4f4f, 1px 0 #4f4f4f, 0 -1px #4f4f4f; */
+   
+    width: 100%;
+    
+}
+
+.h3-add-book{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3rem;
+    margin-left:30px ;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    width: 100vw;
+    
+
+}
+
+#add-book-input{
+    margin-top: 0;
+    margin-bottom: 20px;
+    background-color: #b77878;
+    width: 30%;
+ 
+    
+}
+
+#add-book-input button{
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-image: url(./assets/heart.jpg);
+    background-size: contain;
+    
+   
+    
+    
+}
+
+
+
 #books-wrapper{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: space-evenly;
+    align-items: center;
 
    
 }
 
-.card-book{
-    width: 30%;
+
+.add-container{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    width: 80%;
+    margin: 30px;
+    
+    
+}
+
+.add-container button{
+    margin: 30px;
+}
+
+.card-book{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    gap: 20px;
+    border: 2px solid white;
+    background-color: rgb(196, 196, 196);
+}
+
+.card-book img{
+    height: 80%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin: 10px;
+
+}
+
+.card-book strong{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px;
+    text-transform: capitalize;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Lugrasimo';
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn-div-card{
+
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+height: 20%;
+
+}
+
+.btn-div-card button{
+    flex: 1;
+    align-self: flex-end;
+    justify-self: end;
+    margin: 10px;
+    
+
+}
+
+.spacer{
+    flex: 1;
 }
