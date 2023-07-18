@@ -4,15 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Mock</title>
+    <title>La tua Libreria Virtuale</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <header>
+        <h1> la tua Libreria Virtuale </h1>
+    </header>
+    <div  id="add-book-input">
+        <form name ="addBooks">
+            <label for="title"> Titolo </label><input name="title" type="text">
+            <label for="author"> Autore </label><input name="author"type="text">
+            <label for="dop"> Anno di pubblicazione </label><input name="dop"type="number">
+            <label for="genre"> Genere </label><input name="genre"type="text">
+         
+        </form>
+        <button onclick="saveBooks()"> inserisci </button>
+    </div>
+   
 
     <div id="books-wrapper"></div>
-<div id="mainContainer"></div>
 </body>
-    <script src="./service/db-service.js"></script>
+<script src="./service/db-service.js"></script>
 <script src="./models/book.js"></script>
 
 <script src="./models/manager.js"></script>

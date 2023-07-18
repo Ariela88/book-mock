@@ -7,11 +7,11 @@ class Manager {
       this.booksArray.push(book);
     }
   
-    orderByTitle() {
+   orderByTitle() {
       this.booksArray.sort((book1, book2) => book1.title.localeCompare(book2.title));
     }
   
-    orderByDop() {
+   orderByDop() {
       this.booksArray.sort((book1, book2) => book1.dop.localeCompare(book2.dop));
     }
   
