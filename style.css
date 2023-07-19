@@ -6,7 +6,7 @@
 button{
     background-color: white;
 
-    color: rgb(26, 26, 26);
+    color: rgb(70, 69, 69);
     font-size: 1rem;
     box-shadow: none;
     border: none;
@@ -15,9 +15,15 @@ button{
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 10px;
+    padding: 5px;
     
   
     
+}
+
+label{
+    margin: 10px 0px;
+
 }
 
 
@@ -64,9 +70,15 @@ h1{
     align-items: center;
     margin-top: 30px;
     width: 30%;
-    background-color: #ffffff;
+    background-color: #ffffffd0;
+    align-self: first baseline;
+   
     
 
+}
+
+h3{
+    padding-left: 30px;
 }
 
 #add-book-input{
@@ -85,6 +97,10 @@ h1{
     margin-top: 0;
 }
 
+.sort-container{
+
+    align-self: center;
+}
 
 .main{
     display: flex;
@@ -128,10 +144,11 @@ h1{
     width: 20%;
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 450px;
     gap: 20px;
     border: 2px solid white;
-    background-color: rgb(196, 196, 196);
+    background-color: rgba(196, 196, 196, 0.456);
+    border-radius: 10px;
 }
 
 .card-book img{
@@ -140,6 +157,7 @@ h1{
     justify-self: center;
     align-self: center;
     margin: 10px;
+    border: 1px solid rgb(76, 76, 76);
 
 }
 

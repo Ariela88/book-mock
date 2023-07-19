@@ -45,36 +45,5 @@ class DbService {
     }
 
 
-    static OrderBookByDop(){
-
-      let newArray = []
-    
-      for (const book of manager.booksArray) {
-    
-        newArray.push(book)
-     
-      }
-    
-      console.log('sort ')
-    
-      return newArray.sort((a,b)=> a > b ? a : b)
-    }
-    
-    static OrderBookByTitle(){
-    
-      let newArray = []
-    
-      for (const book of manager.booksArray) {
-    
-        newArray.push(book)
-     
-      }
-    
-     
-    
-      return newArray.sort((a,b)=> a.title.localeCompare(b.title))
-      
-    }
-
 
 }

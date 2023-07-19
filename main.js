@@ -1,9 +1,17 @@
 let manager;
 
+let allBooks;
+
+const service = new DbService()
+
+
 DbService.getAllBooks().then(books => {
   manager = new Manager(books);
+  allBooks = books
   render(manager.booksArray);
 });
+
+
 
 
 function render(books) {
@@ -18,28 +26,15 @@ function render(books) {
     cardBook.classList.add('card-book');
 
 
-    // const authorCard = document.createElement('span');
-    // const dopCard = document.createElement('span');
-    // const genreCard = document.createElement('span');
     const coverCard = document.createElement('img');
     coverCard.src = book.cover
     const titleCard = document.createElement('strong');
     const nodeTitle = document.createTextNode(book.title);
-    // const nodeAuthor = document.createTextNode(book.author);
-    // const nodeDop = document.createTextNode(book.dop);
-    // const nodeGenre = document.createTextNode(book.genre);
 
-
-
-    // authorCard.appendChild(nodeAuthor);
-    // dopCard.appendChild(nodeDop);
-    // genreCard.appendChild(nodeGenre);
     cardBook.appendChild(coverCard);
     titleCard.appendChild(nodeTitle);
     cardBook.appendChild(titleCard);
-    // cardBook.appendChild(authorCard);
-    // cardBook.appendChild(dopCard);
-    // cardBook.appendChild(genreCard);
+
 
     booksWrapper.appendChild(cardBook);
     const spacer = document.createElement('div')
@@ -93,34 +88,20 @@ function saveBooks() {
 
 }
 
-function OrderBookByDop() {
+function OrderDop() {
+  console.log('soort')
 
-  let newArray = []
+  manager.orderByDop()
+  render(allBooks)
 
-  for (const book of manager.booksArray) {
-
-    newArray.push(book)
-
-  }
-
-  console.log('sort ')
-
-  return newArray.sort((a, b) => a > b ? a : b)
 }
 
-function OrderBookByTitle() {
-
-  let newArray = []
-
-  for (const book of manager.booksArray) {
-
-    newArray.push(book)
-
-  }
+function OrderTitle() {
 
 
+  manager.orderByTitle()
+  render(allBooks)
 
-  return newArray.sort((a, b) => a.title.localeCompare(b.title))
 
 }
 

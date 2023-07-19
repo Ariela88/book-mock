@@ -12,7 +12,7 @@ class Manager {
     }
   
    orderByDop() {
-      this.booksArray.sort((book1, book2) => book1.dop.localeCompare(book2.dop));
+      this.booksArray.sort((book1, book2) => book1.dop > book2.dop ? book1.dop : book2.dop);
     }
   
     deleteBook(index) {
