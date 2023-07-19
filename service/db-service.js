@@ -11,6 +11,8 @@ class DbService {
       const tempArray = [];
       console.log(genericArray)
       for (const obj of genericArray) {
+
+        
         const newBook = new Book(obj.title, obj.author, obj.dop, obj.genre, obj.cover,obj.id);
         tempArray.push(newBook);
       }

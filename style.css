@@ -14,6 +14,7 @@ button{
     margin-left:30px ;
     text-transform: uppercase;
     cursor: pointer;
+    border-radius: 10px;
     
   
     
@@ -23,10 +24,14 @@ button{
 
 body{
     box-sizing: border-box;
+    /* background-image: url(./assets/books-color.jpg);
+    background-size: contain; */
 
-   margin: 0;
+    margin: 0;
     background-color: bisque;
 }
+
+
 header{
 
 
@@ -53,21 +58,24 @@ h1{
 .h3-add-book{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.3rem;
-    margin-left:30px ;
+    padding-left:30px ;
     margin-bottom: 0;
     display: flex;
     align-items: center;
     margin-top: 30px;
-    width: 100vw;
+    width: 30%;
+    background-color: #ffffff;
     
 
 }
 
 #add-book-input{
-    margin-top: 0;
+    margin-top: -30px;
     margin-bottom: 20px;
     background-color: #b77878;
     width: 30%;
+    padding-left:30px ;
+    
  
     
 }
@@ -82,8 +90,8 @@ h1{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-image: url(./assets/heart.jpg);
-    background-size: contain;
+    /* background-image: url(./assets/heart.jpg);
+    background-size: contain; */
     
    
     
@@ -169,4 +177,28 @@ height: 20%;
 
 .spacer{
     flex: 1;
+}
+
+#details-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    background-color: antiquewhite;
+    width: 30%;
+    margin: auto;
+    height: 40%;
+
+}
+
+#details-wrapper img{
+    width: 40%;
+}
+
+#details-wrapper h2{
+
+    font-size: 2rem;
+    text-align: center;
 }
